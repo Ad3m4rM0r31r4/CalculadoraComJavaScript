@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #017b65;
+}
+
+.dark {
+    background: #313436;
+}
+
+.calculator {
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.131),
+        -15px -15px 20px #00856c;
+}
+
+.dark .calculator {
+    background: #33393e;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2),
+        -15px -15px 20px rgba(94, 94, 94, 0.2);
+}
+
+.calculator .botão {
+    position: relative;
+    display: grid;
+}
+
+.calculator .botão #value {
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    overflow: none;
+    width: 100%;
+    text-align: end;
+    color: #e6eceb;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.130),
+        inset -5px -5px 20px #00856c;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.dark .calculator .botão #value {
+    background: #353839;
+    color: #79ecec;
+    text-shadow: 2px 2px 10px #00a2ff,
+        2px 2px 20px #00a2ff;
+    box-shadow: inset 13px 13px 18px rgba(0, 0, 0, 0.4),
+        inset -13px -13px 18px rgba(94, 94, 94, 0.1);
+}
+
+.calculator .botão span {
+    position: relative;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.130),
+        -5px -5px 20px #00856c;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #afafaf;
+    border: 2px solid #017b65;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.130) -5px -5px 10px #00856c;
+    border-radius: 10px;
+}
+
+.dark .calculator .botão span {
+    color: #79ecec;
+    border: 2px solid rgba(53, 53, 54, 0.77);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.319),
+        -5px -5px 10px rgba(35, 34, 34, 0.262);
+
+}
+
+.calculator .botão span:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.130) inset -5px -5px 10px #00856c;
+    color: #3698f4;
+}
+
+.dark .calculator .botão span:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.319),
+        inset -5px -5px 10px rgba(35, 34, 34, 0.262);
+}
+
+.calculator .botão span#clear {
+    grid-column: span 2;
+    background: linear-gradient(132deg, rgb(8, 117, 97) 38%, rgba(0, 75, 62, 1) 100%);
+    color: #fff;
+    border: 2px solid #00856c;
+}
+
+.calculator .botão span#plus {
+    grid-row: span 2;
+    background: linear-gradient(132deg, rgb(10, 161, 133) 38%, rgb(6, 97, 82) 100%);
+    color: #ffffff;
+    border: 2px solid #00856c;
+}
+
+.calculator .botão span#equal {
+    grid-row: span 2;
+    background: linear-gradient(132deg, rgb(24, 104, 118) 38%, rgb(5, 47, 38) 100%);
+    color: #ffffff;
+    border: 2px solid #00856c;
+}
+
+.dark .calculator .botão span#clear,
+.dark .calculator .botão span#plus,
+.dark .calculator .botão span#equal {
+    border: 2px solid #333;
+}
+
+
+.calculator .botão span#clear:active,
+.calculator .botão span#plus:active,
+.calculator .botão span#equal:active {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.130),
+        -5px -5px 10px #037b65,
+        inset 5px 5px 10px rgba(0, 0, 0, 0.130);
+}
+
+.dark .calculator .botão span#clear:active,
+.dark .calculator .botão span#plus:active,
+.dark .calculator .botão span#equal:active {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggleBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    border: 2px solid #afafaf;
+    box-shadow: 2px 2px 10px rgb(0,0,0,0.1),
+                -2px -2px 10px rgba(255, 255, 255, 0.708);
+}
+
+.dark .toggleBtn {
+    background: rgb(39, 204, 168);
+    border: 2px solid rgb(20, 107, 103);
+    box-shadow: 5px 5px 10px rgba(35, 182, 150, 0.245),
+        -5px -5px 10px rgba(35, 182, 150, 0.245);
+}
